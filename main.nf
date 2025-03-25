@@ -4,6 +4,7 @@ params.outdir = "output"
 
 process clustering {
     //container "community.wave.seqera.io/library/r-base_r-cluster_r-dbscan_r-factoextra_r-ggplot2:ddced3a187d9f68a"
+    container "community.wave.seqera.io/library/r-base_r-cluster_r-dbscan_r-factoextra_pruned:e5533d7135fbd7e8"
 
     input:
     path abundance_table
@@ -21,6 +22,7 @@ process clustering {
 
 process plot_clusters {
     //container "community.wave.seqera.io/library/r-base_r-cluster_r-dbscan_r-factoextra_r-ggplot2:ddced3a187d9f68a"
+    container "community.wave.seqera.io/library/r-base_r-cluster_r-dbscan_r-factoextra_pruned:e5533d7135fbd7e8"
 
     input:
     path cluster_table
